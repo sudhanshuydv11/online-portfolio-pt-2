@@ -1,1 +1,2 @@
-# online-portfolio-pt-2
+# online-portfolio
+personal-portfolio
