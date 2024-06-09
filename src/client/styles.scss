@@ -1,9 +1,73 @@
-.test-class{
-    margin-top: 20em;
-    margin-left: 20em;
-    width:20em
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25+Charted&family=Kalam:wght@300;400;700&family=M+PLUS+Rounded+1c&display=swap');
+.full-width-centre-content{
+    width:100vw;
+    display: flex;
+    justify-content: center; 
 }
-.dropdown-test{
-    background-color: aqua;
-    outline: blue;
+
+.my-name{
+    @extend .full-width-centre-content;
+   font-size: 10vw; 
+   font-family: "Dancing Script", cursive;
+}
+
+.my-photo{
+@extend .full-width-centre-content;
+background-color: antiquewhite;
+height: 24em;
+
+}
+
+.about-me{
+    @extend .full-width-centre-content;
+    font-size: 5em ;
+    font-family: "Jersey 25 Charted", sans-serif;
+}
+
+.generic-content-wrapper{
+    @extend .full-width-centre-content;
+    font-size: 5em;    
+}
+
+@keyframes un-hide{
+    0%{
+        transform: translateY(100px);
+        opacity:0
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform:  translateY(0px) ;
+    }
+
+}
+
+@keyframes scroll-animation{
+    from{
+        transform: scale(0.5, 0.5);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+
+.translate-content{
+    opacity: 0;
+
+    &--animate{
+        opacity: 1;
+        animation-duration: 0.5s;
+        animation-name: un-hide;
+    }
+}
+
+.triiger-when-in-view-default{
+    opacity: 0;
+}
+
+.scroll-animation{
+animation-name: scroll-animation;
+animation-timeline: view();
 }
