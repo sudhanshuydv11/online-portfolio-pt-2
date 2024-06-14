@@ -5,6 +5,7 @@ module.exports={
     mode:'development',
     devServer: {
       static: './dist',
+      port: 3000,
       compress: true
     },
     devtool: 'source-map',
