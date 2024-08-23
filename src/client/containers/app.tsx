@@ -20,7 +20,7 @@ return <>
 <ExperienceContentContainer/>
 <PreferredStackContainer/>
 <div className="generic-content-wrapper">
-   Contact Me
+   GET IN TOUCH
 </div>
 
    </>;
