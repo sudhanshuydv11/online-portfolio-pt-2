@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25+Charted&family=Kalam:wght@300;400;700&family=M+PLUS+Rounded+1c&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
-.full-width-centre-content{
-    width:100vw;
-    display: flex;
-    justify-content: center; 
+.body{
+    margin: 0;
 }
 
-.my-name{
-    @extend .full-width-centre-content;
-   font-size: 10vw; 
-   font-family: "Dancing Script", cursive;
+.full-width-centre-content{
+    width:100%;
+    display: flex;
+    justify-content: center; 
 }
 
 .my-photo{
@@ -69,4 +68,8 @@ animation-name: scroll-animation;
 animation-timeline: view();
 }
 
+.full-height-width{
+    height:100%;
+    width:100%
+}
 
