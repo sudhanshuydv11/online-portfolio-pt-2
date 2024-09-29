@@ -5,11 +5,14 @@
     font-size: 5em ;
     font-family: "Jersey 25 Charted", sans-serif;
     padding-top: 1em;
-}
 
-.about-me-content{
-    @extend .full-width-centre-content;
-    font-size: 2em;
-    font-family: "Playwrite IS", cursive;
-    padding-top: 0;
+    &-content{
+        @extend .full-width-centre-content;
+        font-size: 2em;
+        font-family: "Playwrite IS", cursive;
+        padding-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
 }

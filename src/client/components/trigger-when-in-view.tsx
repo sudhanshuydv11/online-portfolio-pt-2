@@ -3,12 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 type TriggerWhenInViewType={
     children:React.JSX.Element,
     baseClass:string,
+    style:object,
     intersectionClass: string
 }
 
 export const TriggerWhenInView=({
     children,
     baseClass,
+    style,
     intersectionClass
 }
 :TriggerWhenInViewType
@@ -26,7 +28,7 @@ export const TriggerWhenInView=({
 
     return(
         <>
-            <div ref={observedItemRef as React.LegacyRef<HTMLDivElement>}
+            <div style={style} ref={observedItemRef as React.LegacyRef<HTMLDivElement>}
             className={`${baseClass} ${isIntersecting ? intersectionClass : ''}`}>
             {children}
             </div>
