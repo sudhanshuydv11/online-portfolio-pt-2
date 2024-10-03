@@ -1,24 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 
+type TriggerViewChildrenType=(props: {isInterSecting: boolean}) => React.JSX.Element;
+
 type TriggerWhenInViewType={
-    children:React.JSX.Element,
+    children: TriggerViewChildrenType ,
     baseClass:string,
     style:object,
     intersectionClass: string
 }
 
 export const TriggerWhenInView=({
-    children,
+    children:Children,
     baseClass,
     style,
     intersectionClass
 }
 :TriggerWhenInViewType
 )=>{
-    const [isIntersecting, setIsIntersecting]=useState(false);
+    const [isInterSecting, setIsInterSecting]=useState(false);
     const observedItemRef: React.RefObject<HTMLElement>=useRef< HTMLElement >(null);
     const observer=new IntersectionObserver((enteries)=> {
-       setIsIntersecting(enteries[0]?.isIntersecting);
+       setIsInterSecting(enteries[0]?.isIntersecting);
        console.log(enteries);
     }, {} );
     
@@ -29,8 +31,8 @@ export const TriggerWhenInView=({
     return(
         <>
             <div style={style} ref={observedItemRef as React.LegacyRef<HTMLDivElement>}
-            className={`${baseClass} ${isIntersecting ? intersectionClass : ''}`}>
-            {children}
+            className={`${baseClass} ${isInterSecting ? intersectionClass : ''}`}>
+            <Children isInterSecting={isInterSecting}/>
             </div>
         </>
     );

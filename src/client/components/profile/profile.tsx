@@ -10,8 +10,8 @@ export const Profile=()=>{
    </img>
    </div>
    <div className="my-name">
-      <text>Sudhanshu</text>
-      <text>Yadav</text>
+      <div>Sudhanshu</div>
+      <div>Yadav</div>
    </div>
 </Shutter>
     </div> ;   

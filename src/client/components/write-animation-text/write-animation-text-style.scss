@@ -1,0 +1,19 @@
+@keyframes hide-un-hide {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.text{
+    opacity: 0;
+    &-animation{
+        opacity: 0;
+        animation-name: hide-un-hide;
+        animation-duration: 0.2s;
+        animation-delay: var(--delay);
+        animation-fill-mode: forwards;
+    }
+}

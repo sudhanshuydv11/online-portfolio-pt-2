@@ -1,6 +1,7 @@
 import React from "react";
 import { TriggerWhenInView } from "../trigger-when-in-view.tsx";
 import './about-me.scss';
+import { WriteAnimationText } from "../write-animation-text/write-animation-text.tsx";
 
 export const AboutMe=()=>{
 
@@ -10,24 +11,22 @@ return <>
 <TriggerWhenInView baseClass="translate-content"
    intersectionClass='translate-content--animate'
    style={{}}>
-
-<div className="about-me">
+{
+   ()=><div className="about-me">
    ABOUT ME
 </div>
+}
 </TriggerWhenInView>
 
-
 <div className="about-me-content">
-{aboutMeContent.split('')
-   .map((character: string, index: number): React.JSX.Element=> 
-   <TriggerWhenInView baseClass="translate-content"
-   intersectionClass='translate-content--animate'
-   style={{'--delay':`${0.1+(index*0.02)}s`}}>
-      <span>
-         {character===" " ?<>&nbsp;</>: character}
-      </span>
-   </TriggerWhenInView>
-   )}
+<TriggerWhenInView baseClass=''
+   intersectionClass=''
+   style={{}}>
+{
+   ({isInterSecting}: {isInterSecting:boolean})=> <WriteAnimationText text={aboutMeContent} isInterSecting={isInterSecting}/>
+
+}
+</TriggerWhenInView>
 </div>
 </>;
 };
