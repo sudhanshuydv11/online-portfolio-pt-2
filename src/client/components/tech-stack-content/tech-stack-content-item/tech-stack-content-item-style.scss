@@ -1,3 +1,10 @@
+@keyframes pop-up-scroll {
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
 .tech-stack-item{
     &-wrapper{
         background-color: #F5F5F7;
@@ -6,6 +13,12 @@
         width: 100%;
         margin-bottom: 1rem;
         border-radius: 1rem;
+        opacity: 0;
+        transform: scale(0);
+        animation-name: pop-up-scroll;
+        animation-timeline: view(80% 1%);
+        animation-fill-mode: forwards;
+
     }
 
     &-image{
