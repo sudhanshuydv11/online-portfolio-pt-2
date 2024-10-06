@@ -2,16 +2,24 @@
 
 .about-me{
     @extend .full-width-centre-content;
-    font-size: 5em ;
+    font-size: 5rem ;
     font-family: "Jersey 25 Charted", sans-serif;
-    padding-top: 1em;
+    padding-top: 30%;
+
+    &-wrapper{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &-content{
         @extend .full-width-centre-content;
         font-size: 2em;
         font-family: "Playwrite IS", cursive;
-        padding-top: 0;
-        display: flex;
+        padding-top: 5%;
+        max-width: 50rem;
         flex-wrap: wrap;
 
     }
