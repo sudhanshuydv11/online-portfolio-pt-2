@@ -15,11 +15,12 @@ export const TechStackContentItem=({imgSrc,name, desc, descHeading}:TechStackCon
 <img className="tech-stack-item-image-content" src={imgSrc}/>
 </div>
 <div className="tech-stack-item-content">
+
     <div className="name">
-    {name}
+    <b>{name}</b>
     </div>
     <div className="description-heading">
-        {descHeading}
+       <b> {descHeading} </b>
     </div>
     <div className="description">
         {desc}

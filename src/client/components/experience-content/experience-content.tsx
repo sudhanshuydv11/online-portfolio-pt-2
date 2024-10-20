@@ -1,5 +1,6 @@
 import React from "react";
 import { ExperienceContentItem } from "../experience-content-tem/experience-content-item.tsx";
+import './experience-content-style.scss';
 
 export const ExperienceContent=()=>{
 
